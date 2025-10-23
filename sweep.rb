@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/env ruby
+#!/usr/bin/env ruby
 abort "Enter the metal, bending length, thickness, inner radius, angle between bends, and two bends in sequence, separated by spaces, together with the launch of the program." if ARGV.nil? || ARGV.empty?
 require_relative "coe"
 module Sweep

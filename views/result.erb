@@ -1,0 +1,16 @@
+<body>
+<div class = "container">
+<h2> Result </h2>
+<div class = "result">
+<span class="result">Result sweep</span> =
+<span style = "color: <%= @result.is_a?(String) && @result.start_with?('Error') ? 'red': 'green'%>;">
+<%= @result_sweep %>
+</span>
+<span class="result">Result effort</span> =
+<span style = "color: <%= @result.is_a?(String) && @result.start_with?('Error') ? 'red': 'green'%>;">
+<%= @result_effort %>
+</span>
+</div>
+<a href="/"> return to calculate</a>
+</div>
+</body>

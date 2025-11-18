@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title> sweep calculator</title>
-</head>
-<body>
-<div class="container">
-<h2>Calculate</h2>
-<form action = "/calculate" method="post">
-<p><strong>Metal</p>
-<input type ="text" name = "metal">
-<p><strong>Bending length</p>
-<input type ="text" name = "b_l">
-<p><strong>Metal thickness</p>
-<input type ="text" name = "thickness">
-<p><strong>Inner radius</p>
-<input type ="text" name = "radius">
-<p><strong>Angle</p>
-<input type ="text" name = "angle">
-<p><strong>Bend one</p>
-<input type ="text" name = "bend_1">
-<p><strong>Bend two</p>
-<input type ="text" name = "bend_2">
-<button type="submit">
-</form>
-</div>
-</body>
+    <head>
+        <title> sweep calculator</title>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Calculate</h2>
+            <form action = <%="/#{session["id"]}/calculate"%> method="post">
+                <p><strong>Metal</p>
+                <select type = "text" name = "metal">
+                    <option value = "st" selected>Steel</option>
+                    <option value = "ss"> Stainless steel</option>
+                    <option value = "al">Aluminum</option>
+                </select>
+
+                <p><strong>Bending length</p>
+                <input type ="text" name = "b_l">
+                <p><strong>Metal thickness</p>
+                <input type ="text" name = "thickness">
+                <p><strong>Inner radius</p>
+                <input type ="text" name = "radius">
+                <p><strong>Angle</p>
+                <input type ="text" name = "angle">
+                <p><strong>Bend one</p>
+                <input type ="text" name = "bend_1">
+                <p><strong>Bend two</p>
+                <input type ="text" name = "bend_2">
+                <p></p>
+                <div>
+                    <button type="submit" style="height:20px;width:180px">Exec</button>
+                </div>
+            </form>
+        </div>
+    </body>
 </html>
